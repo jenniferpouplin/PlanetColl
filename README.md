@@ -25,7 +25,7 @@ The optimisation of the different parameters is obtained using a grid search.
 ## Description of dataset
 
 <img
-src=“./images/pouplin.png”
+src=“https://github.com/jenniferpouplin/PlanetColl/blob/master/images/pouplin.png”
 raw=true
 alt=“Martian Moons Dataset”
 style=“margin-right: 10px;”

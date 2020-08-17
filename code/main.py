@@ -1,12 +1,12 @@
 import numpy as np
 import os
 import argparse
-
+from time import time
 from sklearn.model_selection import train_test_split
 from optimise import optimise, PARAMS, CLASSIFIERS
 from utils import print_conf_mat, describe_data
 from dataloader import load_data, DATALOADERS
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
     # spit into a training and testing set
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
-
+    t0 = time()
     # get params of model (optimised using a grid search)
     if opts.optim:
         estimator = optimise(X_train, y_train, clf=opts.model, verbose=0, cross_val=5)
@@ -41,8 +41,19 @@ if __name__ == '__main__':
     else:
         estimator = CLASSIFIERS[opts.model]()
         estimator.fit(X_train, y_train)
-
+    train_time = time() - t0
+    print("train time: %0.3fs" % train_time)
     # evaluation
+    t0 = time()
     y_pred = estimator.predict(X_test)
+    test_time = time() - t0
+    print("done in %fs" %(test_time))
+    score = accuracy_score(y_test, y_pred)
+    print("accuracy:   %0.3f" % score)
     print_conf_mat(y_test, y_pred, class_name.values())
 
+    # confusion matrix
+
+    cm = confusion_matrix(y_test, y_pred,
+                          labels=class_name.values())
+    print(cm)

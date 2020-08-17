@@ -22,7 +22,7 @@ The optimisation of the different parameters is obtained using a grid search.
 - `python main.py --model decision_tree --dataloader cambioni --optim` (example for running the model decision_tree, and optimise it on the cambioni datatset)
 - `python main.py --model knn --dataloader iris` (example for running the model knn without optimisation on the iris datatset)
 
-## Description of dataset
+## Description of Martian Moons dataset (pouplin.csv)
 
 ![dataset](https://github.com/jenniferpouplin/PlanetColl/blob/master/images/pouplin.png?raw=true "Dataset")
 
@@ -49,10 +49,10 @@ accuracy:   0.616
 
 |                     |hit-and-run | merger |  disruption |  supercatastrophic|
 |-------------|-------------|-------------|-------------|-------------|
-hit-and-run                 0.51    0.41         0.0               0.08
-merger                        0.18    0.81         0.0               0.00
-disruption                   0.73    0.15         0.0               0.12
-supercatastrophic      0.67    0.05         0.0               0.28
+|hit-and-run             |    0.51|    0.41  |       0.0      |         0.08 |
+|merger                     |   0.18 |   0.81   |      0.0       |        0.00|
+|disruption                 |  0.73  |  0.15    |     0.0        |       0.12 |
+|supercatastrophic     | 0.67   | 0.05     |    0.0         |      0.28 |
 
 
 - Using random_forest:

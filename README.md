@@ -28,8 +28,7 @@ The optimisation of the different parameters is obtained using a grid search.
 src=“https://github.com/jenniferpouplin/PlanetColl/blob/master/images/pouplin.png”
 raw=true
 alt=“Martian Moons Dataset”
-style=“margin-right: 10px;”
-/>
+style=“margin-right: 10px;”>
 
 ## Results 
 

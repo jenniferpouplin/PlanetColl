@@ -11,7 +11,7 @@
 - `adaboost`: ensemble learning method that aims to boost weak classifiers based on their failures. 
 
 ## Dataset to test: 
--`pouplin`: dataset of collisions obtained from debris disk accretion simulation of a martian debris disks over 1Myr for 5,000 particles and their expected outcomes using Leinhardt and Stewart (2012). 4996 data points.
+- `pouplin`: dataset of collisions obtained from debris disk accretion simulation of a martian debris disks over 1Myr for 5,000 particles and their expected outcomes using Leinhardt and Stewart (2012). 4996 data points.
 - `cambioni`: open source dataset used for rock collisions, with four classes: (hit-and-run, graze-and-merge, merging, disruption), four features (Mass, Gamma, Angle, Velocity), from 769 points.
 - `iris`: toy dataset to classify types of flowers, with three classes: (Setosa, Versicolour, Virginica), four spaces (Sepal Length, Sepal Width, Petal Length, Petal Width), from 150 points.
 
@@ -25,7 +25,7 @@ The optimisation of the different parameters is obtained using a grid search.
 ## Description of dataset
 
 <img
-src=“images/pouplin.png”
+src=“./images/pouplin.png”
 raw=true
 alt=“Martian Moons Dataset”
 style=“margin-right: 10px;”

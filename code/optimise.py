@@ -9,7 +9,7 @@ from sklearn.svm import LinearSVC, SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import RandomForestClassifier
-
+from sklearn.neural_network import MLPClassifier
 import warnings
 
 warnings.filterwarnings('ignore')
@@ -24,7 +24,8 @@ CLASSIFIERS = {
     'logistic_regression': LogisticRegression,
     'naive_bayes': GaussianNB,
     'random_forest': RandomForestClassifier,
-    'svm': SVC
+    'svm': SVC,
+    "MLP": MLPClassifier
 }
 
 
@@ -69,6 +70,11 @@ PARAMS = {
         'kernel': ['poly', 'rbf', 'sigmoid'],
         'degree': np.linspace(2, 10, 1).astype(int),
         'gamma': np.logspace(-4, 3, 10),
+    },
+    'MLP': {
+        'solver': ['lbfgs', 'adam', 'sgd'],
+        'alpha': [1e-5],
+        'random_state': [1],
     }
 }
 

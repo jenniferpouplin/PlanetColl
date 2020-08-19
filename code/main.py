@@ -7,11 +7,9 @@ from optimise import optimise, PARAMS, CLASSIFIERS
 from utils import print_conf_mat, describe_data
 from dataloader import load_data, DATALOADERS
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-
+from sklearn.neural_network import MLPClassifier
 def get_args():
     parser = argparse.ArgumentParser()
-    root = '/Users/alison/Documents/Projects/data/toy_datasets'
-    # path
     parser.add_argument('--dataloader', default='cambioni', type=str, choices=sorted(list(DATALOADERS.keys())))
     parser.add_argument('--Data', default='../data/', type=str)
     parser.add_argument('--outDir', default= '../experiments/', type=str)
@@ -47,13 +45,9 @@ if __name__ == '__main__':
     t0 = time()
     y_pred = estimator.predict(X_test)
     test_time = time() - t0
-    print("done in %fs" %(test_time))
+    print("predicted in %fs" %(test_time))
     score = accuracy_score(y_test, y_pred)
     print("accuracy:   %0.3f" % score)
+    # confusion matrix
     print_conf_mat(y_test, y_pred, class_name.values())
 
-    # confusion matrix
-
-    cm = confusion_matrix(y_test, y_pred,
-                          labels=class_name.values())
-    print(cm)

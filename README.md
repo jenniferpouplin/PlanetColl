@@ -9,6 +9,7 @@
 - `logistic_regression`: regression obtained on log-odds successively in a one-versus-all fashion. 
 - `naive_bayes`: Bayes rules applied in a naive way to the dataset.
 - `adaboost`: ensemble learning method that aims to boost weak classifiers based on their failures. 
+- `MLP`: Multi-layer perceptron learning algorithm 
 
 ## Dataset to test: 
 - `pouplin`: dataset of collisions obtained from debris disk accretion simulation of a martian debris disks over 1Myr for 5,000 particles and their expected outcomes using Leinhardt and Stewart (2012). 4996 data points.
